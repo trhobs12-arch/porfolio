@@ -300,126 +300,196 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* ============================================================
+    EXPERIENCE
+============================================================ */}
 
-      {/* ============================================================
-          EXPERIENCE
-      ============================================================ */}
+<section id="experience" className="px-6 py-24 lg:px-8">
+  <div className="mx-auto max-w-6xl">
+    <div className="grid gap-12 lg:grid-cols-[0.65fr_1.35fr]">
 
-      <section id="experience" className="px-6 py-24 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
-            <SectionHeading
-              eyebrow="Experience & Delivery"
-              title="Technical experience with project leadership exposure."
-              text="Experience across business systems, enterprise integration and digital trust — combining technical understanding with project delivery."
-            />
+      {/* LEFT — INTRO */}
+      <div className="lg:sticky lg:top-28 lg:self-start">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-600">
+          Experience
+        </p>
 
-            <div className="space-y-5">
-              {/* Current role */}
-              <article className="group relative overflow-hidden rounded-3xl border border-blue-200 bg-blue-50 p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-100/40 md:p-9">
-                <div className="absolute right-0 top-0 h-40 w-40 translate-x-12 -translate-y-12 rounded-full bg-blue-100 transition duration-500 group-hover:scale-150" />
+        <h2 className="mt-5 text-4xl font-bold tracking-[-0.05em] text-slate-950 md:text-5xl">
+          Built from infrastructure to digital trust.
+        </h2>
 
-                <div className="relative">
-                  <div className="flex items-start justify-between gap-5">
-                    <div>
-                      <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700">
-                        Current
-                      </p>
+        <p className="mt-6 text-lg leading-8 text-slate-600">
+          A technical journey across network infrastructure, business
+          systems, project delivery and enterprise digital trust.
+        </p>
 
-                      <h3 className="mt-4 text-3xl font-bold tracking-[-0.05em] text-slate-950">
-                        Project Engineer
-                      </h3>
+        <div className="mt-8 h-px w-20 bg-blue-600" />
+      </div>
 
-                      <p className="mt-2 font-medium text-slate-600">
-                        Digital Trust & Enterprise Integration
-                      </p>
-                    </div>
+      {/* RIGHT — EXPERIENCE CARDS */}
+      <div className="space-y-5">
 
-                    <span className="rounded-full bg-white px-3 py-1.5 text-[10px] font-bold uppercase tracking-wide text-blue-700 shadow-sm">
-                      Current Role
-                    </span>
-                  </div>
+        {/* CURRENT ROLE */}
+        <article className="group relative overflow-hidden rounded-3xl border border-blue-200 bg-blue-50 p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-100/40 md:p-9">
 
-                  <p className="mt-7 max-w-3xl leading-7 text-slate-600">
-                    Working across digital trust products and enterprise
-                    integrations, with hands-on exposure to PKI, S/MIME,
-                    Certificate Lifecycle Management, Certificate Authority
-                    APIs, product implementation, technical validation and
-                    customer-facing delivery.
-                  </p>
+          <div className="absolute right-0 top-0 h-40 w-40 translate-x-12 -translate-y-12 rounded-full bg-blue-100 transition duration-500 group-hover:scale-150" />
 
-                  <div className="mt-7 flex flex-wrap gap-2">
-                    {[
-                      "Digital Trust",
-                      "PKI",
-                      "S/MIME",
-                      "CLM",
-                      "CA API",
-                      "Product Implementation",
-                      "Integration",
-                      "Technical Validation",
-                    ].map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-600"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </article>
+          <div className="relative">
 
-              {/* Gross Synergy */}
-{/* Previous Experience */}
-<article className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/40 md:p-9">
-  <div className="absolute right-0 top-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-slate-50 transition duration-500 group-hover:scale-150" />
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700">
+                  Current Focus
+                </p>
 
-  <div className="relative">
-    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
-      Project Leadership
-    </p>
+                <h3 className="mt-4 text-2xl font-bold tracking-[-0.04em] text-slate-950 md:text-3xl">
+                  Project Engineer
+                </h3>
 
-    <h3 className="mt-4 text-2xl font-bold tracking-[-0.04em] text-slate-950 md:text-3xl">
-      Project Engineer → Project Team Lead
-    </h3>
+                <p className="mt-2 font-medium text-slate-600">
+                  Digital Trust & Enterprise Integration
+                </p>
+              </div>
 
-    <p className="mt-2 font-medium text-slate-600">
-      Inventory Management, E-Commerce & ERP Systems
-    </p>
+              <span className="shrink-0 rounded-full bg-white px-3 py-1.5 text-[10px] font-bold uppercase tracking-wide text-blue-700 shadow-sm">
+                Current
+              </span>
+            </div>
 
-    <p className="mt-7 max-w-3xl leading-7 text-slate-600">
-      Progressed from project engineering into project team leadership,
-      working across inventory management, e-commerce and ERP systems.
-      Gained experience in business workflows, product integration,
-      system implementation, testing and customer delivery.
-    </p>
+            <p className="mt-7 leading-7 text-slate-600">
+              Working across digital trust products and enterprise
+              integrations, with hands-on exposure to PKI, S/MIME,
+              Certificate Lifecycle Management, Certificate Authority APIs,
+              product implementation, technical validation and customer-facing
+              delivery.
+            </p>
 
-    <div className="mt-7 flex flex-wrap gap-2">
-      {[
-        "Project Leadership",
-        "Inventory Management",
-        "E-Commerce",
-        "ERP",
-        "API Integration",
-        "System Integration",
-        "SIT / UAT",
-        "Customer Coordination",
-      ].map((item) => (
-        <span
-          key={item}
-          className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600"
-        >
-          {item}
-        </span>
-      ))}
+            <div className="mt-7 flex flex-wrap gap-2">
+              {[
+                "Digital Trust",
+                "PKI",
+                "S/MIME",
+                "CLM",
+                "CA API",
+                "Product Implementation",
+                "Integration",
+                "Technical Validation",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-600"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+          </div>
+        </article>
+
+
+        {/* PROJECT LEADERSHIP */}
+        <article className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/40 md:p-9">
+
+          <div className="absolute right-0 top-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-slate-50 transition duration-500 group-hover:scale-150" />
+
+          <div className="relative">
+
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
+              Project Leadership
+            </p>
+
+            <h3 className="mt-4 text-2xl font-bold tracking-[-0.04em] text-slate-950 md:text-3xl">
+              Project Engineer → Project Team Lead
+            </h3>
+
+            <p className="mt-2 font-medium text-slate-600">
+              Inventory Management, E-Commerce & ERP Systems
+            </p>
+
+            <p className="mt-7 leading-7 text-slate-600">
+              Progressed from project engineering into project team leadership,
+              working across inventory management, e-commerce and ERP systems.
+              Gained experience in business workflows, product integration,
+              system implementation, testing and customer delivery.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-2">
+              {[
+                "Project Leadership",
+                "Inventory Management",
+                "E-Commerce",
+                "ERP",
+                "API Integration",
+                "System Integration",
+                "SIT / UAT",
+                "Customer Coordination",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+          </div>
+        </article>
+
+
+        {/* NETWORK ENGINEER */}
+        <article className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/40 md:p-9">
+
+          <div className="absolute right-0 top-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-slate-50 transition duration-500 group-hover:scale-150" />
+
+          <div className="relative">
+
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
+              Earlier Foundation
+            </p>
+
+            <h3 className="mt-4 text-2xl font-bold tracking-[-0.04em] text-slate-950 md:text-3xl">
+              Network Engineer
+            </h3>
+
+            <p className="mt-2 font-medium text-slate-600">
+              Network Infrastructure & Technical Operations
+            </p>
+
+            <p className="mt-7 leading-7 text-slate-600">
+              Built a strong technical foundation across network
+              infrastructure, connectivity, security and troubleshooting.
+              Gained hands-on exposure to LAN/WAN environments, network
+              equipment, firewalls, VPNs and network monitoring.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-2">
+              {[
+                "LAN / WAN",
+                "Network Infrastructure",
+                "Routers & Switches",
+                "Firewalls",
+                "VPN",
+                "Network Monitoring",
+                "Troubleshooting",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+          </div>
+        </article>
+
+      </div>
     </div>
   </div>
-</article>
-            </div>
-          </div>
-        </div>
-      </section>
+</section>
 
       {/* ============================================================
           ABOUT
