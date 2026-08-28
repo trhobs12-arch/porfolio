@@ -25,6 +25,24 @@ body {
   mask-image: linear-gradient(to bottom, #000, transparent);
 }
 
+.network-shell { transition: transform 220ms ease-out; }
+.network-grid { background-image: linear-gradient(#e2e8f080 1px, transparent 1px), linear-gradient(90deg, #e2e8f080 1px, transparent 1px); background-size: 28px 28px; mask-image: linear-gradient(135deg, transparent, #000 20%, #000 80%, transparent); }
+.network-line { stroke: #bfdbfe; stroke-width: 1.5; stroke-dasharray: 4 7; animation: trace 5s linear infinite; transition: stroke .25s ease, stroke-width .25s ease; }
+.network-line-active { stroke: #0284c7; stroke-width: 2; }
+.flow-dot { fill: #06b6d4; filter: drop-shadow(0 0 4px #38bdf8); }
+.central-node { min-width: 138px; border: 1px solid #93c5fd; background: #fff; padding: 18px 16px; text-align: center; box-shadow: 0 0 0 8px #eff6ff, 0 10px 30px #dbeafe99; animation: central-pulse 3.8s ease-in-out infinite; transition: border-color .25s ease, box-shadow .25s ease; }
+.central-node-active { border-color: #2563eb; box-shadow: 0 0 0 11px #dbeafeaa, 0 12px 36px #bfdbfe; }
+.network-node-wrap { animation: node-float 4.5s ease-in-out infinite; }
+.network-node { border: 1px solid #cbd5e1; background: #fff; padding: 9px 11px; color: #334155; font-size: 10px; font-weight: 800; letter-spacing: .1em; white-space: nowrap; transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease; cursor: default; outline: none; }
+.network-node:hover, .network-node:focus, .network-node-active { border-color: #2563eb; background: #eff6ff; color: #1d4ed8; transform: translateY(-2px); }
+.network-node-related { border-color: #bfdbfe; }
+.flow-indicator { animation: flow-step 3s ease-in-out infinite; }
+@keyframes trace { to { stroke-dashoffset: -44; } }
+@keyframes central-pulse { 50% { box-shadow: 0 0 0 12px #eff6ff, 0 12px 32px #dbeafe99; } }
+@keyframes node-float { 50% { transform: translateY(-4px); } }
+@keyframes flow-step { 0%, 100% { transform: translateY(0); opacity: .25; } 50% { transform: translateY(52px); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .network-shell, .network-line, .central-node, .network-node-wrap, .flow-indicator { animation: none; transition: none; } }
+
 * {
   box-sizing: border-box;
 }
@@ -81,5 +99,79 @@ body {
 @media (max-width: 640px) {
   .hero-grid {
     background-size: 40px 40px;
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black, transparent 72%);
+}
+
+@keyframes hero-flow-y {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 260px);
+    opacity: 0;
+  }
+}
+
+@keyframes hero-flow-x {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(260px, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes hero-flow-x-reverse {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-260px, -50%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-grid {
+    animation: none !important;
   }
 }
