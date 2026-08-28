@@ -1,64 +1,12 @@
+import { CaseStudyPage } from "@/components/portfolio";
+
 export default function CaApiIntegrationPage() {
-  return (
-    <main className="min-h-screen bg-slate-950 px-6 py-24 text-white">
-      <div className="mx-auto max-w-5xl">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-400">
-          Project 03 · API Integration
-        </p>
-
-        <h1 className="mt-6 text-5xl font-bold tracking-[-0.05em] md:text-6xl">
-          Certificate Authority API Integration
-        </h1>
-
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-400">
-          REST and SOAP API integration testing covering authentication,
-          certificate ordering, retrieval, verification, renewal, reissue and
-          revocation.
-        </p>
-
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
-          <ProjectDetail title="Focus" value="PKI · Certificate Authority" />
-          <ProjectDetail title="APIs" value="REST · SOAP" />
-          <ProjectDetail title="Tools" value="Postman · OAuth 2.0" />
-          <ProjectDetail title="Role" value="Product Engineer" />
-        </div>
-
-        <div className="mt-16 border-t border-white/10 pt-10">
-          <h2 className="text-2xl font-bold">Project Overview</h2>
-
-          <p className="mt-5 leading-8 text-slate-400">
-            Worked on API integration and testing activities involving
-            certificate lifecycle operations. Activities included request
-            validation, authentication, certificate ordering, retrieval,
-            verification and lifecycle management.
-          </p>
-        </div>
-
-        <a
-          href="/#projects"
-          className="mt-12 inline-block text-sm font-bold text-blue-400 hover:text-blue-300"
-        >
-          ← Back to projects
-        </a>
-      </div>
-    </main>
-  );
-}
-
-function ProjectDetail({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-      <p className="text-xs font-bold uppercase tracking-[0.15em] text-slate-500">
-        {title}
-      </p>
-
-      <p className="mt-3 font-semibold text-slate-200">{value}</p>
-    </div>
-  );
+  return <CaseStudyPage study={{
+    number: "03", title: "Certificate Authority API Integration", category: "API Integration / PKI",
+    intro: "REST and SOAP API integration and testing for certificate lifecycle operations using OAuth-based authentication.",
+    overview: "Certificate Authority APIs enable applications and enterprise platforms to work programmatically with certificate services. My involvement focused on understanding API capabilities, testing integration scenarios and validating lifecycle operations through REST and SOAP interfaces.",
+    contribution: ["Analysed API documentation and integration requirements", "Prepared and tested REST and SOAP API requests", "Configured OAuth 2.0 authentication for API access", "Tested ordering, retrieval, verification, renewal, reissue and revocation workflows", "Investigated API responses, error codes and request parameters", "Documented API workflows, test results and technical findings"],
+    value: "The testing helped validate how enterprise applications can interact with certificate authority services, while making request validation and error handling easier to understand during integration.",
+    technologies: ["REST API", "SOAP API", "OAuth 2.0", "Postman", "JSON", "XML", "CSR", "X.509", "SSL/TLS", "PKI"]
+  }} />;
 }
